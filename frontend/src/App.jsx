@@ -26,7 +26,9 @@ function App() {
         textAlign={"center"}
         fontSize={"24px"}
         m={8}
+        mt={0}
         fontFamily={"cursive"}
+        color={"white"}
         bg={"#1A202C"}
       >
         Medium Article Scraper and Viewer
