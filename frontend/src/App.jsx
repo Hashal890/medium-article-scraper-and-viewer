@@ -27,6 +27,7 @@ function App() {
         fontSize={"24px"}
         m={8}
         fontFamily={"cursive"}
+        bg={"#1A202C"}
       >
         Medium Article Scraper and Viewer
       </Heading>

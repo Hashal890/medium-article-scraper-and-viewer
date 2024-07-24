@@ -18,11 +18,11 @@ const ArticleCard = ({ title, desc, author, date, url }) => {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Curabitur in libero eu libero ornare tempor."}
         </Text>
       </Stack>
-      <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
-        <Stack direction={"column"} spacing={0} fontSize={"sm"}>
-          <Text fontWeight={600}>{author}</Text>
-          <Text color={"gray.500"}>{date}</Text>
-        </Stack>
+      <Stack direction={"column"} spacing={2} fontSize={"sm"} mt={6}>
+        <Text fontWeight={600} color={"gray.500"}>
+          {author}
+        </Text>
+        <Text color={"gray.500"}>{date}</Text>
       </Stack>
       <Link href={url} color={"teal.500"} textAlign={"center"} isExternal>
         Read more
