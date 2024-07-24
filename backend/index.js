@@ -11,9 +11,9 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.post("/scrape", scrapeRouter);
+app.use("/scrape", scrapeRouter);
 
-app.get("/articles", articlesRouter);
+app.use("/articles", articlesRouter);
 
 app.listen(PORT, async () => {
   await mongooseConnect();
