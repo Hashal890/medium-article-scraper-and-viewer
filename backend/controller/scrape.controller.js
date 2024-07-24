@@ -10,12 +10,13 @@ const scrapeMediumArticles = async (topic) => {
     return Array.from(document.querySelectorAll("article"))
       .slice(0, 5)
       .map((article) => {
-        let title = article.querySelector("h2").innerText;
-        let author = article.querySelector("p").innerText;
-        let desc = article.querySelector("h3").innerText;
-        let date = article.querySelector("div > span").innerText;
-        date = date.split(`\n`)[0];
-        let url = article.querySelector("a").href;
+        let title = article.querySelector("h2")?.innerText;
+        let author = article.querySelector("p")?.innerText;
+        let desc = article.querySelector("h3")?.innerText;
+        let date = article
+          .querySelector("div > span")
+          ?.innerText.split(`\n`)[0];
+        let url = article.querySelector("a")?.href;
         return { title, author, desc, date, url };
       });
   });
