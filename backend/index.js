@@ -11,8 +11,13 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-app.use("/scrape", scrapeRouter);
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to medium article scraper and viewer backend",
+  });
+});
 
+app.use("/scrape", scrapeRouter);
 app.use("/articles", articlesRouter);
 
 app.listen(PORT, async () => {
