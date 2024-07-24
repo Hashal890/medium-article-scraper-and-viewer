@@ -10,21 +10,27 @@ const ArticleCard = ({ title, desc, author, date, url }) => {
       borderRadius={"lg"}
     >
       <Stack>
-        <Heading color={"white"} fontSize={"lg"} fontFamily={"body"}>
+        <Heading color={"white"} fontSize={"lg"} fontFamily={"body"} mb={0}>
           {title}
         </Heading>
+        <Stack direction={"column"} spacing={2} fontSize={"sm"} mt={2}>
+          <Text fontWeight={600} color={"gray.500"}>
+            Author: {author}
+          </Text>
+          <Text color={"gray.500"}>Date of publication: {date}</Text>
+        </Stack>
         <Text color={"gray.500"} fontSize={"sm"}>
           {desc ||
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Curabitur in libero eu libero ornare tempor."}
         </Text>
       </Stack>
-      <Stack direction={"column"} spacing={2} fontSize={"sm"} mt={6}>
-        <Text fontWeight={600} color={"gray.500"}>
-          {author}
-        </Text>
-        <Text color={"gray.500"}>{date}</Text>
-      </Stack>
-      <Link href={url} color={"teal.500"} textAlign={"center"} isExternal>
+      <Link
+        href={url}
+        color={"teal.500"}
+        textAlign={"center"}
+        mt={4}
+        isExternal
+      >
         Read more
       </Link>
     </Box>

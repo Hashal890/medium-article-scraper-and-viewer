@@ -25,8 +25,7 @@ function App() {
       <Heading
         textAlign={"center"}
         fontSize={"24px"}
-        m={8}
-        mt={0}
+        p={8}
         fontFamily={"cursive"}
         color={"white"}
         bg={"#1A202C"}
