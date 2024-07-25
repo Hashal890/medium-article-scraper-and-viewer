@@ -12,8 +12,8 @@ RUN apk add --no-cache \
   dumb-init
 
 # Set the Puppeteer environment variables
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=false \
-    PUPPETEER_CACHE_DIR=/usr/src/app/.cache
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -24,9 +24,6 @@ RUN npm install
 
 # Bundle app source
 COPY . .
-
-# Ensure Puppeteer installs its own version of Chromium
-RUN npx puppeteer install
 
 # Expose the port the app runs on
 EXPOSE 5000
