@@ -46,6 +46,7 @@ const SearchArticles = ({ setArticles }) => {
             isInvalid={!!error}
             flex="1"
             mr={2}
+            color={"white"}
           />
           <Button colorScheme="teal" onClick={handleSearch} isLoading={loading}>
             Search
