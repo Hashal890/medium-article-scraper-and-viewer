@@ -31,12 +31,11 @@ function App() {
   }, []);
 
   return (
-    <Box bg={"#1A202C"} minH={"100vh"} fontFamily={"cursive"}>
+    <Box bg={"#1A202C"} minH={"100vh"}>
       <Heading
         textAlign={"center"}
         fontSize={"24px"}
         p={8}
-        fontFamily={"cursive"}
         color={"white"}
         bg={"#1A202C"}
       >

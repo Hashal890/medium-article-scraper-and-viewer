@@ -19,7 +19,7 @@ const ArticleCard = ({ title, desc, author, date, url }) => {
           </Text>
           <Text color={"gray.500"}>Date of publication: {date}</Text>
         </Stack>
-        <Text color={"gray.500"} fontSize={"sm"}>
+        <Text color={"gray.500"} fontSize={"sm"} mb={4}>
           {desc ||
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Curabitur in libero eu libero ornare tempor."}
         </Text>
@@ -28,7 +28,6 @@ const ArticleCard = ({ title, desc, author, date, url }) => {
         href={url}
         color={"teal.500"}
         textAlign={"center"}
-        mt={4}
         isExternal
       >
         Read more
