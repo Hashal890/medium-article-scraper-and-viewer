@@ -28,7 +28,7 @@ const SearchArticles = ({ setArticles }) => {
           topic,
         }
       );
-      setArticles(response.data);
+      setArticles(response.data.articles);
     } catch (error) {
       setError("Failed to fetch articles!");
     }
