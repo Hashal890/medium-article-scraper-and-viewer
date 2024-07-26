@@ -32,7 +32,7 @@ const scrapeMediumArticles = async (topic) => {
           return { title, author, desc, date, url };
         });
     });
-    return { message: "Articles found!", articles };
+    return articles;
   } catch (error) {
     console.error("Error scraping Medium:", error);
     throw error;

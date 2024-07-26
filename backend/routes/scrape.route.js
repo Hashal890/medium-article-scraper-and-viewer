@@ -12,7 +12,7 @@ scrapeRouter.post("/", async (req, res) => {
     }
     const articles = await scrapeMediumArticles(topic);
     await saveArticlesInDatabase(articles);
-    res.json(articles);
+    res.json({ message: "Articles found!", articles });
   } catch (error) {
     console.error("Failed to retrieve articles:", error);
     res
