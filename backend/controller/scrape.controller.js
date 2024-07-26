@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 const scrapeMediumArticles = async (topic) => {
   let browser;
   try {
-    const executablePath = puppeteer.executablePath();
+    const executablePath = await puppeteer.executablePath();
     browser = await puppeteer.launch({
       args: [
         "--no-sandbox",
